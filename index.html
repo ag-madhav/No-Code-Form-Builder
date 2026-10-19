@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Builder</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="page-header">
+    <h1>Form Builder</h1>
+    <p>Design a form and preview what users will see.</p>
+  </header>
+
+  <main class="app-layout">
+    <section class="builder-panel" aria-labelledby="builder-heading">
+      <div class="section-heading">
+        <h2 id="builder-heading">Admin builder</h2>
+        <p>Add and arrange the fields for the membership form.</p>
+      </div>
+
+      <div class="builder-actions">
+        <label for="field-type">New field type</label>
+        <select id="field-type">
+          <option value="text">Text</option>
+          <option value="number">Number</option>
+          <option value="select">Select</option>
+          <option value="checkbox">Checkbox</option>
+          <option value="date">Date</option>
+          <option value="file">File</option>
+        </select>
+        <button id="add-field-button" type="button">Add field</button>
+      </div>
+
+      <div class="schema-actions" aria-label="Schema actions">
+        <button id="export-button" type="button">Export JSON</button>
+        <button id="import-button" type="button">Import JSON</button>
+        <input id="import-file" type="file" accept="application/json,.json" hidden>
+      </div>
+
+      <p id="builder-message" role="status" aria-live="polite"></p>
+      <div id="field-list" class="field-list">
+        <p class="empty-state">No fields yet. Add a field to begin building the form.</p>
+      </div>
+    </section>
+
+    <section class="preview-panel" aria-labelledby="preview-heading">
+      <div class="section-heading">
+        <h2 id="preview-heading">Student preview</h2>
+        <p>This is a local preview of the form students will complete.</p>
+      </div>
+
+      <form id="preview-form">
+        <div id="preview-fields">
+          <p class="empty-state">Your form preview will appear here.</p>
+        </div>
+        <button id="submit-button" type="submit">Submit membership form</button>
+        <p id="submission-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <noscript>
+    <p>This application needs JavaScript enabled to build and preview forms.</p>
+  </noscript>
+</body>
+</html>

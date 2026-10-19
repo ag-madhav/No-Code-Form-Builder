@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "fields": [
+    {
+      "id": "student-name",
+      "label": "Student name",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "registration-number",
+      "label": "Registration number",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "year-of-study",
+      "label": "Year of study",
+      "type": "select",
+      "required": true,
+      "options": [
+        "First year",
+        "Second year",
+        "Third year",
+        "Fourth year"
+      ]
+    },
+    {
+      "id": "areas-of-interest",
+      "label": "Areas of interest",
+      "type": "checkbox",
+      "required": false
+    },
+    {
+      "id": "date-of-joining",
+      "label": "Date of joining",
+      "type": "date",
+      "required": false
+    },
+    {
+      "id": "resume",
+      "label": "Resume",
+      "type": "file",
+      "required": false
+    }
+  ]
+}

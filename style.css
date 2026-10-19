@@ -1,0 +1,243 @@
+:root {
+  --page-background: #f4f1ea;
+  --panel-background: #fffdf8;
+  --text-color: #202a35;
+  --muted-text: #5f6b75;
+  --border-color: #c9d1d6;
+  --accent-color: #175c78;
+  --accent-dark: #0d4055;
+  --soft-accent: #e4f0f4;
+  --danger-color: #a33b32;
+  --success-color: #276749;
+  --shadow: 0 8px 24px rgba(32, 42, 53, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--page-background);
+  color: var(--text-color);
+  font-family: "Trebuchet MS", sans-serif;
+  line-height: 1.5;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  border: 1px solid var(--accent-dark);
+  border-radius: 4px;
+  padding: 0.65rem 0.9rem;
+  background: var(--accent-color);
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--accent-dark);
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #e3a008;
+  outline-offset: 2px;
+}
+
+.page-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 1.5rem;
+}
+
+.page-header h1,
+.section-heading h2 {
+  margin: 0;
+  color: var(--accent-dark);
+  font-family: Georgia, serif;
+}
+
+.page-header h1 {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.1;
+}
+
+.page-header p,
+.section-heading p {
+  margin: 0.5rem 0 0;
+  color: var(--muted-text);
+}
+
+.app-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.25rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem 2.5rem;
+}
+
+.builder-panel,
+.preview-panel {
+  min-width: 0;
+  padding: 1.5rem;
+  background: var(--panel-background);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.section-heading {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.builder-actions,
+.schema-actions {
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.builder-actions label {
+  flex-basis: 100%;
+  font-weight: bold;
+}
+
+.builder-actions select {
+  flex: 1 1 12rem;
+}
+
+.schema-actions {
+  align-items: center;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.schema-actions button:last-of-type {
+  background: transparent;
+  color: var(--accent-dark);
+}
+
+.schema-actions button:last-of-type:hover {
+  background: var(--soft-accent);
+}
+
+input,
+select {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: white;
+  color: var(--text-color);
+}
+
+#builder-message,
+#submission-message {
+  min-height: 1.5rem;
+  margin: 1rem 0 0;
+  color: var(--success-color);
+  font-weight: bold;
+}
+
+.field-list,
+#preview-fields {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.empty-state {
+  margin: 0;
+  padding: 1rem;
+  border: 1px dashed var(--border-color);
+  color: var(--muted-text);
+  text-align: center;
+}
+
+.field-card,
+.preview-field {
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: white;
+}
+
+.field-card {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.field-card label,
+.preview-field label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: bold;
+}
+
+.field-card small {
+  color: var(--muted-text);
+}
+
+.field-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.field-actions button {
+  padding: 0.45rem 0.65rem;
+  font-size: 0.9rem;
+}
+
+.field-actions .remove-button {
+  border-color: var(--danger-color);
+  background: transparent;
+  color: var(--danger-color);
+}
+
+.field-actions .remove-button:hover {
+  background: #f8e8e5;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox-row input {
+  width: auto;
+  min-height: auto;
+}
+
+#submit-button {
+  width: 100%;
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 760px) {
+  .page-header {
+    padding-top: 1.75rem;
+  }
+
+  .app-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .builder-panel,
+  .preview-panel {
+    padding: 1.1rem;
+  }
+}
