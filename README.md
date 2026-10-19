@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Club Membership Form Builder
 
 A small no-code form builder for a college club membership form. It uses only HTML, CSS, and vanilla JavaScript, so it can run directly in a browser without Node.js, a backend, or a database.
