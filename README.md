@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Club Membership Form Builder
 
 A small no-code form builder for a college club membership form. It uses only HTML, CSS, and vanilla JavaScript, so it can run directly in a browser without Node.js, a backend, or a database.
@@ -92,3 +93,4 @@ Select fields include an additional `options` array. The importer checks the sch
 - A file input only selects a local browser file; the file is not uploaded or saved.
 - The current form definition is kept in memory and is lost when the page is refreshed unless it was exported first.
 - The first version does not include conditional fields, undo/redo, autosave, authentication, cloud storage, templates, or drag-and-drop.
+
